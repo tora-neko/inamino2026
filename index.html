@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>兵庫県いなみ野学園 入学記念写真 名前検索</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .container {
+            position: relative;
+            max-width: 900px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .clickable-area {
+            position: absolute;
+            background-color: transparent;
+            cursor: pointer;
+            border-radius: 5px; /* マウスを乗せた時の角を丸くする */
+        }
+        .clickable-area:hover {
+            border: 2px solid #007bff; /* マウスを乗せた時の枠線 */
+            background-color: rgba(0, 123, 255, 0.1); /* マウスを乗せた時の背景 */
+        }
+        .tooltip {
+            visibility: hidden;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 10px 15px;
+            position: absolute;
+            z-index: 100;
+            bottom: 125%; /* 画像の上に表示 */
+            left: 50%;
+            margin-left: -60px; /* 位置の調整 */
+            opacity: 0;
+            transition: opacity 0.3s;
+            font-size: 1.2em; /* 文字を少し大きく */
+            white-space: nowrap; /* 改行しない */
+        }
+        .tooltip::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #333 transparent transparent transparent;
+        }
+        .clickable-area:hover .tooltip {
+            visibility: visible;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="photo-container">
+        <!-- 
+            写真ファイル名を「入学式.jpg」としてください。
+            同じフォルダに保存する必要があります。
+        -->
+        <img src="入学式.jpg" alt="入学記念写真" id="main-photo">
+        <!-- 
+            ここから下に、名前を表示する「透明なクリックエリア」を追加していきます。
+            coords="x, y, 幅, 高さ" で指定します。（画像全体に対する%で指定）
+        -->
+
+        <!-- 
+          【 1列目（一番前、椅子席）】
+        -->
+        <!-- 1: 阿部 伸子 -->
+        <div class="clickable-area" style="top: 53.3%; left: 10%; width: 5%; height: 20%;">
+            <span class="tooltip">1. 阿部 伸子</span>
+        </div>
+        <!-- 2: 池田 憲三 -->
+        <div class="clickable-area" style="top: 51.2%; left: 17%; width: 5%; height: 20%;">
+            <span class="tooltip">2. 池田 憲三</span>
+        </div>
+        <!-- 3: 石原 幸市 -->
+        <div class="clickable-area" style="top: 49.2%; left: 23.8%; width: 5%; height: 20%;">
+            <span class="tooltip">3. 石原 幸市</span>
+        </div>
+        <!-- 4: 牛場担任 -->
+        <div class="clickable-area" style="top: 50.5%; left: 29.7%; width: 5%; height: 20%;">
+            <span class="tooltip">牛場担任</span>
+        </div>
+        <!-- 4: 芦田学科主任 -->
+        <div class="clickable-area" style="top: 50.4%; left:36.2%; width: 5%; height: 20%;">
+            <span class="tooltip">芦田学科主任</span>
+        </div>
+  　    <!-- 4: 大西副学園長 -->
+        <div class="clickable-area" style="top: 51.5%; left: 42.6%; width: 5%; height: 20%;">
+            <span class="tooltip">大西副学園長</span>
+        </div>
+   　   <!-- 4: 橋本学園長 -->
+        <div class="clickable-area" style="top: 51%; left: 48.4%; width: 5%; height: 20%;">
+            <span class="tooltip">橋本学園長</span>
+        </div>
+　　　  <!-- 4: 川西副学園長 -->
+        <div class="clickable-area" style="top: 50.5%; left: 55%; width: 5%; height: 20%;">
+            <span class="tooltip">川西副学園長</span>
+        </div>
+        <!-- 4: 今津 勝子 -->
+        <div class="clickable-area" style="top: 52.5%; left: 61.4%; width: 5%; height: 20%;">
+            <span class="tooltip">4. 今津 勝子</span>
+        </div>
+        <!-- 5: 大西 慶藏 -->
+        <div class="clickable-area" style="top: 52%; left: 67.5%; width: 5%; height: 20%;">
+            <span class="tooltip">5. 大西 慶藏</span>
+        </div>
+        <!-- 6: 岡田 万里子 -->
+        <div class="clickable-area" style="top: 52.3%; left: 74.5%; width: 5%; height: 20%;">
+            <span class="tooltip">6. 岡田 万里子</span>
+        </div>
+
+        <!-- 
+          【 2列目（立ち席）】
+        -->
+        <!-- 7: 岡本 美知子 -->
+        <div class="clickable-area" style="top: 46%; left: 13.1%; width: 4.8%; height: 10%;">
+            <span class="tooltip">7. 岡本 美知子</span>
+        </div>
+        <!-- 8: 合寶 ちゆき -->
+        <div class="clickable-area" style="top: 45%; left: 20.4%; width: 4.8%; height: 10%;">
+            <span class="tooltip">8. 合寶 ちゆき</span>
+        </div>
+        <!-- 9: 金川 幸代 -->
+        <div class="clickable-area" style="top: 44.8%; left: 26.8%; width: 4.8%; height: 10%;">
+            <span class="tooltip">9. 金川 幸代</span>
+        </div>
+        <!-- 10: 川田 紀子 -->
+        <div class="clickable-area" style="top: 42.6%; left: 33.6%; width: 4.8%; height: 10%;">
+            <span class="tooltip">10. 川田 紀子</span>
+        </div>
+        <!-- 11: 岸本 美保子 -->
+        <div class="clickable-area" style="top: 42.5%; left: 40%; width: 4.8%; height: 10%;">
+            <span class="tooltip">11. 岸本 美保子</span>
+        </div>
+        <!-- 12: 清下 妙子 -->
+        <div class="clickable-area" style="top: 43%; left: 47.2%; width: 4.8%; height: 10%;">
+            <span class="tooltip">12. 清下 妙子</span>
+        </div>
+        <!-- 13: 口田 紳治 -->
+        <div class="clickable-area" style="top: 42.5%; left: 53.6%; width: 4.8%; height: 10%;">
+            <span class="tooltip">13. 口田 紳治</span>
+        </div>
+        <!-- 14: 小山 克見 -->
+        <div class="clickable-area" style="top: 41.5%; left: 61.9%; width: 4.8%; height: 10%;">
+            <span class="tooltip">14. 小山 克見</span>
+        </div>
+        <!-- 15: 酒井 妃登美 -->
+        <div class="clickable-area" style="top: 43%; left: 68.8%; width: 4.5%; height: 10%;">
+            <span class="tooltip">15. 酒井 妃登美</span>
+        </div>
+        <!-- 16: 白石 千鶴 -->
+        <div class="clickable-area" style="top: 44.5%; left: 76%; width: 4.5%; height: 10%;">
+            <span class="tooltip">16. 白石 千鶴</span>
+        </div>
+        <!-- 17: 菅田 健一郎 -->
+        <div class="clickable-area" style="top: 40.2%; left: 81.8%; width: 5%; height: 30%;">
+            <span class="tooltip">17. 菅田 健一郎</span>
+        </div>
+
+        <!-- 
+          【 3列目（コーラス台）】
+        -->
+        <!-- 18: 高橋 恭子 -->
+        <div class="clickable-area" style="top: 36.2%; left: 16.9%; width: 4.5%; height: 10%;">
+            <span class="tooltip">18. 高橋 恭子</span>
+        </div>
+        <!-- 19: 竹内 勝彦 (右側独立) -->
+        <div class="clickable-area" style="top: 19.1%; left: 82.1%; width: 4.5%; height: 10%;">
+            <span class="tooltip">19. 竹内 勝彦</span>
+        </div>
+        <!-- 20: 立花 正夫 -->
+        <div class="clickable-area" style="top: 35.3%; left: 24.2%; width: 4.5%; height: 10%;">
+            <span class="tooltip">20. 立花 正夫</span>
+        </div>
+        <!-- 21: 辻本 桂子 -->
+        <div class="clickable-area" style="top: 35.3%; left: 30.5%; width: 4.5%; height: 10%;">
+            <span class="tooltip">21. 辻本 桂子</span>
+        </div>
+        <!-- 22: 中濱 芳喜 -->
+        <div class="clickable-area" style="top: 32.9%; left: 36.7%; width: 4.3%; height: 10%;">
+            <span class="tooltip">22. 中濱 芳喜</span>
+        </div>
+        <!-- 23: 中村 憲子 -->
+        <div class="clickable-area" style="top: 36.1%; left: 42.5%; width: 4.3%; height: 10%;">
+            <span class="tooltip">23. 中村 憲子</span>
+        </div>
+        <!-- 24: 野村 慶子 -->
+        <div class="clickable-area" style="top: 37.5%; left: 47.5%; width: 4.3%; height: 8%;">
+            <span class="tooltip">24. 野村 慶子</span>
+        </div>
+        <!-- 25: 長谷川 和義 -->
+        <div class="clickable-area" style="top: 32.5%; left: 52.7%; width: 4.3%; height: 10%;">
+            <span class="tooltip">25. 長谷川 和義</span>
+        </div>
+        <!-- 26: 林 勝義 -->
+        <div class="clickable-area" style="top: 34.1%; left: 58.9%; width: 4.3%; height: 10%;">
+            <span class="tooltip">26. 林 勝義</span>
+        </div>
+        <!-- 27: 藤井 秀子 -->
+        <div class="clickable-area" style="top: 35.3%; left: 65.6%; width: 4.3%; height: 10%;">
+            <span class="tooltip">27. 藤井 秀子</span>
+        </div>
+        <!-- 28: 藤田 惠美 -->
+        <div class="clickable-area" style="top: 34.5%; left: 72.4%; width: 4.3%; height: 10%;">
+            <span class="tooltip">28. 藤田 惠美</span>
+        </div>
+
+        <!-- 
+          【 4列目（舞台）】
+        -->
+        <!-- 29: 古庄 昭 -->
+        <div class="clickable-area" style="top: 29%; left: 32.7%; width: 4.3%; height: 9%;">
+            <span class="tooltip">29. 古庄 昭</span>
+        </div>
+        <!-- 30: 法龍院 美幸 -->
+        <div class="clickable-area" style="top: 32.5%; left: 39.4%; width: 4.2%; height: 8%;">
+            <span class="tooltip">30. 法龍院 美幸</span>
+        </div>
+        <!-- 31: 前田 晴秀 -->
+        <div class="clickable-area" style="top: 32.3%; left: 44.7%; width: 4.2%; height: 8%;">
+            <span class="tooltip">31. 前田 晴秀</span>
+        </div>
+        <!-- 32: 溝口 守 -->
+        <div class="clickable-area" style="top: 30.2%; left: 50%; width: 4.2%; height: 8%;">
+            <span class="tooltip">32. 溝口 守</span>
+        </div>
+        <!-- 33: 八木 憲子 -->
+        <div class="clickable-area" style="top: 32.7%; left: 56.3%; width: 4.2%; height: 8%;">
+            <span class="tooltip">33. 八木 憲子</span>
+        </div>
+        <!-- 34: 山田 裕美子 -->
+        <div class="clickable-area" style="top: 32.3%; left: 62.1%; width: 4.2%; height: 8%;">
+            <span class="tooltip">34. 山田 裕美子</span>
+        </div>
+        <!-- 35: 吉田 有希 -->
+        <div class="clickable-area" style="top: 32.6%; left: 68.4%; width: 4.2%; height: 8%;">
+            <span class="tooltip">35. 吉田 有希</span>
+        </div>
+        <!-- 36: 渡辺 絹枝 -->
+        <div class="clickable-area" style="top: 34%; left: 76.4%; width: 4.2%; height: 8%;">
+            <span class="tooltip">36. 渡辺 絹枝</span>
+        </div>
+        
+    </div>
+
+    <script>
+        // 画像読み込み後に実行する（念のため）
+        window.addEventListener('load', function() {
+            // 特にJavaScriptでの処理は不要ですが、
+            // 今後、追加の機能（名前リストから検索など）を追加する場合に使用します。
+        });
+    </script>
+</body>
+</html>
